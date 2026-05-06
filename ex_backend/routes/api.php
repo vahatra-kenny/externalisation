@@ -5,6 +5,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\DemandeController;
+use App\Http\Controllers\PaiementController;
 
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
@@ -31,3 +32,5 @@ Route::apiResource('services', ServiceController::class);
 // Routes service de service
 Route::get('/demandes', [DemandeController::class, 'index']);
 Route::apiResource('demandes', DemandeController::class);
+
+Route::apiResource('paiements', PaiementController::class);
